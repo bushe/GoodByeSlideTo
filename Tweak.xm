@@ -1,5 +1,5 @@
-%hook SBUnlockActionContext
--(NSString*)lockLabel{
-	return @""; //Works for all Notifications other than biteSMS
+%hook SBLockScreenNotificationCell 
+-(void)_updateUnlockText:(id)text{
+	%orig(@"");
 }
 %end
